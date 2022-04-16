@@ -1,16 +1,3 @@
-function host_name() {
-    local color="%{$fg_no_bold[cyan]%}";
-    local color_reset="%{$reset_color%}";
-    local ip
-    if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        ip="$(hostname)";
-    elif [[ "$OSTYPE" == "darwin"* ]]; then
-        ip="$(hostname)";
-    else
-    fi
-    echo "👻 ${color}[%n@${ip}]${color_reset}";
-}
-
 function directory() {
     local color="%{$fg_no_bold[white]%}";
     local directory="${PWD/#$HOME/~}";
@@ -19,7 +6,7 @@ function directory() {
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[red]%}(%{$fg_no_bold[yellow]%}";
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} ";
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}";
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_no_bold[red]%}) 🚩";
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[red]%}) ✅";
 
@@ -63,10 +50,6 @@ output_command_execute_after() {
     fi
     local color_reset="$reset_color";
     cmd="${color_cmd}${cmd}${color_reset}"
-
-    local time="[$(date +%H:%M:%S)]"
-    local color_time="$fg_no_bold[cyan]";
-    time="${color_time}${time}${color_reset}";
 }
 
 precmd() {
@@ -93,5 +76,4 @@ TRAPALRM() {
     fi
 }
 
-PROMPT='$(host_name) $(directory) $(git_status)
-$(command_status) ';
+PROMPT='$(directory) $(git_status) $(command_status) ';
