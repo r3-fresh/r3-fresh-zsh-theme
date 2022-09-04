@@ -1,14 +1,15 @@
 function directory() {
     local color="%{$fg_no_bold[white]%}";
-    local directory="${PWD/#$HOME/~}";
+    # local directory="${PWD/#$HOME/~}";
+    local directory="%1~/";
     local color_reset="%{$reset_color%}";
     echo "📁 ${color}${directory}${color_reset}";
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[red]%}(%{$fg_no_bold[yellow]%}";
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}";
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_no_bold[red]%}) 🚩";
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[red]%}) ✅";
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_no_bold[red]%}) 🚩 ";
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[red]%}) ✅ ";
 
 function update_git_status() {
     GIT_STATUS=$(git_prompt_info);
@@ -76,4 +77,4 @@ TRAPALRM() {
     fi
 }
 
-PROMPT='$(directory) $(git_status) $(command_status) ';
+PROMPT='$(directory) $(git_status)$(command_status) ';
