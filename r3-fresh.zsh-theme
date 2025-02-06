@@ -1,7 +1,7 @@
 function directory() {
     local color="%{$fg_no_bold[white]%}";
     # local directory="${PWD/#$HOME/~}";
-    local directory="%1~/";
+    local directory="%1/";
     local color_reset="%{$reset_color%}";
     echo "📁 ${color}${directory}${color_reset}";
 }
