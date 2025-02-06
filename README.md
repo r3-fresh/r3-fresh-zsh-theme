@@ -1,16 +1,16 @@
-# refpx-zsh-theme
+# r3-fresh-zsh-theme
 
 My personal theme for 'oh-my-zsh'.
 
 ## Screenshot
 
-![refpx zsh theme](https://raw.githubusercontent.com/refpx/refpx-zsh-theme/main/screenshot.png)
+![r3-fresh-zsh-theme](https://raw.githubusercontent.com/r3-fresh/r3-fresh-zsh-theme/main/screenshot.png)
 
 ## Installation
 
-1.  Write in your terminal `git clone https://github.com/refpx/refpx-zsh-theme.git $ZSH_CUSTOM/themes/refpx-zsh-theme`.
+1.  Write in your terminal `git clone https://github.com/r3-fresh/r3-fresh-zsh-theme.git $ZSH_CUSTOM/themes/r3-fresh-zsh-theme`.
 2.  Open your `.zshrc`.
-3.  Change your `ZSH_THEME` to _`refpx-zsh-theme/refpx`_.
+3.  Change your `ZSH_THEME` to _`r3-fresh-zsh-theme/r3-fresh`_.
 
 REF: [Oh-My-Zsh External themes](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes).
 
@@ -20,12 +20,12 @@ Add to the plugins [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosu
 
 ### Contributing
 
-If someone wants to add or improve something, I invite you to collaborate directly in this repository: [refpx-zsh-theme](https://github.com/refpx/refpx-zsh-theme).
+If someone wants to add or improve something, I invite you to collaborate directly in this repository: [r3-fresh-zsh-theme](https://github.com/r3-fresh/r3-fresh-zsh-theme).
 
 ### Contributors
 
-- Fredy Romero : [https://github.com/refpx](https://github.com/refpx)
+- Fredy Romero : [https://github.com/r3-fresh](https://github.com/r3-fresh)
 
 ### License
 
-refpx-zsh-theme is released under the [MIT License](https://opensource.org/licenses/MIT).
+r3-fresh-zsh-theme is released under the [MIT License](https://opensource.org/licenses/MIT).
