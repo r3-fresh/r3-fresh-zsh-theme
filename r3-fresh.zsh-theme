@@ -12,7 +12,8 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_no_bold[red]%}) 🚩 ";
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[red]%}) ✅ ";
 
 function update_git_status() {
-    GIT_STATUS=$(git_prompt_info);
+    # GIT_STATUS=$(git_prompt_info); # This disables the git prompt
+    GIT_STATUS=$(_omz_git_prompt_info);
 }
 
 function git_status() {
